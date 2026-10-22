@@ -1,4 +1,4 @@
-# Contact-Center KPI Pipeline (Databricks + Delta Lake, BigQuery)
+﻿# Contact-Center KPI Pipeline (Databricks + Delta Lake, BigQuery)
 
 A medallion (Bronze / Silver / Gold) pipeline on **synthetic** call-center data (no real customer data). It computes:
 
@@ -30,6 +30,9 @@ raw CSV files (two daily drops, with duplicates and bad rows)
 | Silver | `silver_quarantine` | Rows that failed validation and why |
 | Gold | `gold/daily_kpis` | Contacts, bot resolution rate, SLA breach rate, wait and handle time |
 | Gold | `gold/intent_retraining_candidates` | Intents to re-train, ranked by `priority_score` |
+
+## Interactive walkthrough
+Open [docs/index.html](docs/index.html) in a browser (no server needed): a step-by-step flow, an explanation of every file, and small playgrounds to try the validation and KPI rules.
 
 ## KPI definitions
 - **Bot resolved:** `escalated_to_agent = N` and `outcome = RESOLVED`.
