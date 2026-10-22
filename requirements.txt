@@ -1,0 +1,7 @@
+pyspark>=4.0
+delta-spark>=4.0
+pytest
+duckdb
+sqlglot
+pandas<3
+pyarrow
